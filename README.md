@@ -1,0 +1,2 @@
+# ai-news
+Side project
