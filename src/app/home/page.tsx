@@ -3,6 +3,7 @@ import Logout from "../../components/Logout";
 import { auth } from "../auth";
 
 import { redirect } from "next/navigation";
+import Card from "../../components/Card";
 
 const HomePage = async () => {
     const session = await auth() || {};
@@ -27,14 +28,14 @@ const HomePage = async () => {
         </div>
     </div>
     <div>
-        <div>焦點新聞（可以取個有趣的名字）</div>
-        <div>
-            <div>新聞1</div>!
-            <div>新聞2</div>
-            <div>新聞3</div>
-            <div>新聞4</div>
-            <div>新聞5</div>
-            <div>新聞6</div>
+        <div className="text-3xl font-bold m-10">焦點新聞（可以取個有趣的名字）</div>
+        <div className="flex justify-items-stretch grid grid-cols-3 gap-x-8 gap-y-4 px-[180px]">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </div>
         </div>
         </>
